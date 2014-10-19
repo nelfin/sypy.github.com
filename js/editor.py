@@ -78,7 +78,7 @@ def run(*args):
 
     t0 = time.perf_counter()
     try:
-        exec(src,globals())
+        exec(src, globals(), {})
         state = 1
     except Exception as exc:
         traceback.print_exc()
